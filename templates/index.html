@@ -7,22 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="desafio.html">Desafio</a>
-    <h2>"Hello World! This is my first project with Flask!"</h2><br>
-    <p>Utilizando o recurso do Jinja2 pra carregar a página HTML</p>
-    <p>Meu nome é: </p>{{meu_nome}}<br>
-
-    {% if 7 > 4 %}
-    Sim, 7 é maior que 4!<br>
-    {% else %}
-    Não, 7 é menor que 4!<br>
-    {% endif %}
-
-    {% for i in range(1, 10)%}
-        Listando: {{i}}<br>
-    
-    {%endfor%}
-
-
+    <p>Ir pro formulário tipo GET</p><br>
+    <a href="{{ url_for ('ir_get') }}">Get</a>.<br>
+    <p>Ir pro formulário tipo POST</p><br>
+    <a href="{{ url_for ('ir_post') }}">Post</a>.<br>
 </body>
 </html>
